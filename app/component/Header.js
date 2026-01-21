@@ -120,19 +120,21 @@ const Header = () => {
         }
 
         .logo-image {
-          width: 48px;
-          height: 48px;
+          width: 56px;
+          height: 56px;
           border-radius: 50%;
           object-fit: cover;
-          border: 2px solid rgba(34, 197, 94, 0.3);
-          box-shadow: 0 2px 12px rgba(34, 197, 94, 0.15);
+          border: 3px solid rgba(34, 197, 94, 0.4);
+          box-shadow: 0 4px 16px rgba(34, 197, 94, 0.2), 0 0 0 2px rgba(255, 255, 255, 0.1);
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(22, 163, 74, 0.05));
         }
 
         .logo-image:hover {
           border-color: #22c55e;
-          box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3);
-          transform: scale(1.05);
+          box-shadow: 0 6px 24px rgba(34, 197, 94, 0.4), 0 0 0 3px rgba(255, 255, 255, 0.2);
+          transform: scale(1.08) rotate(5deg);
+          background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(22, 163, 74, 0.1));
         }
 
         .logo-text {
