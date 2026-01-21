@@ -599,7 +599,7 @@ const Header = () => {
                   className="logo-image"
                 />
                 <div className="logo-text">
-                  <div className="company-name">SSERUZ TOURS</div>
+                  <div className="company-name">SSERUZ TOURS AND TRAVEL</div>
                   <div className="company-tagline">...Every mile is a smile</div>
                 </div>
               </Link>

@@ -19,14 +19,14 @@ const CEOPage = () => {
       image: "/pics/sec.jpg"
     },
     {
-      name: "Mirembe Deborah",
+      name: "Counsel Mirembe Deborah",
       role: "Company Lawyer",
       image: "/pics/lawyer.jpg"
     },
     {
-      name: "Ssenyonjo Andrew",
-      role: "IT Specialist",
-      image: "/pics/it.jpg"
+      name: "Bwambale Silve",
+      role: "Company Chef",
+      image: "/pics/chef.jpg"
     }
   ];
 
