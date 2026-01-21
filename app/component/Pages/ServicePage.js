@@ -50,6 +50,12 @@ const ServicePage = () => {
       description: "Expert local guides with deep knowledge of East African culture, history, and wildlife. Our certified guides provide authentic experiences and ensure your journey is both educational and enjoyable.",
       // image: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       features: ["Certified local guides", "Cultural expertise", "Wildlife knowledge"]
+    },
+    {
+      title: "Boat Cruise Services",
+      description: "Experience the beauty of East Africa's waterways with our premium boat cruise services. Explore scenic lakes and rivers with comfortable vessels, knowledgeable crew, and unforgettable views of wildlife and landscapes.",
+      // image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      features: ["Lake & river cruises", "Comfortable vessels", "Wildlife viewing", "Professional crew"]
     }
   ];
 

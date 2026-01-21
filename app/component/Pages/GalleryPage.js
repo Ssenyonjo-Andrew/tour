@@ -12,8 +12,8 @@ const GalleryPage = () => {
     { id: 7, src: "/pics/WhatsApp Image 2026-01-12 at 10.13.16 PM.jpeg", alt: "Safari experience" },
     { id: 8, src: "/pics/IMG-20260119-WA0035.jpg", alt: "Cultural festival" },
     { id: 9, src: "/pics/WhatsApp Image 2026-01-12 at 10.17.46 PM.jpeg", alt: "Guided tour experience" },
-    { id: 10, src: "/pics/WhatsApp Image 2026-01-12 at 10.17.47 PM.jpeg", alt: "Expert guide" },
-    { id: 11, src: "/pics/WhatsApp Image 2026-01-12 at 10.17.51 PM.jpeg", alt: "Cultural immersion" },
+    { id: 10, src: "/pics/team.jpg", alt: "Expert guide" },
+    { id: 11, src: "/pics/mountain.jpg", alt: "Cultural immersion" },
     { id: 12, src: "/pics/WhatsApp Image 2026-01-12 at 10.17.53 PM.jpeg", alt: "Sustainable travel" },
     { id: 13, src: "/pics/WhatsApp Image 2026-01-12 at 10.17.58 PM.jpeg", alt: "Adventure trail" },
     { id: 14, src: "/pics/WhatsApp Image 2026-01-12 at 10.18.01 PM.jpeg", alt: "Nature discovery" },
@@ -62,9 +62,9 @@ const GalleryPage = () => {
     { id: 57, src: "/pics/WhatsApp Image 2026-01-12 at 10.21.12 PM (1).jpeg", alt: "Cultural tour" },
     { id: 58, src: "/pics/WhatsApp Image 2026-01-12 at 10.21.12 PM (2).jpeg", alt: "Cultural tour" },
     { id: 59, src: "/pics/WhatsApp Image 2026-01-12 at 10.21.16 PM (1).jpeg", alt: "Wildlife safari" },
-    { id: 60, src: "/pics/WhatsApp Image 2026-01-12 at 10.21.17 PM (2).jpeg", alt: "Cultural experience" },
-    { id: 61, src: "/pics/WhatsApp Image 2026-01-12 at 10.21.18 PM (1).jpeg", alt: "Mountain adventure" },
-    { id: 62, src: "/pics/WhatsApp Image 2026-01-12 at 10.21.19 PM (1).jpeg", alt: "Safari adventure" },
+    { id: 60, src: "/pics/home.jpg", alt: "Cultural experience" },
+    { id: 61, src: "/pics/team.jpg", alt: "Mountain adventure" },
+    { id: 62, src: "/pics/IMG-20260112-WA0124.jpg", alt: "Safari adventure" },
 
     // IMG Files (January 12, 2026)
     { id: 63, src: "/pics/IMG-20260112-WA0116.jpg", alt: "East African landscape" },
@@ -381,7 +381,7 @@ const GalleryPage = () => {
                 display: 'flex',
                 gap: 'clamp(1rem, 2vw, 2rem)',
                 width: '200%',
-                animation: 'scrollLeft 80s linear infinite',
+                animation: 'scrollLeft 40s linear infinite',
                 willChange: 'transform'
               }}
               onMouseEnter={(e) => { e.currentTarget.style.animationPlayState = 'paused'; }}
@@ -401,7 +401,7 @@ const GalleryPage = () => {
                 display: 'flex',
                 gap: 'clamp(1rem, 2vw, 2rem)',
                 width: '200%',
-                animation: 'scrollRight 60s linear infinite',
+                animation: 'scrollRight 30s linear infinite',
                 willChange: 'transform'
               }}
               onMouseEnter={(e) => { e.currentTarget.style.animationPlayState = 'paused'; }}
@@ -421,7 +421,7 @@ const GalleryPage = () => {
                 display: 'flex',
                 gap: 'clamp(1rem, 2vw, 2rem)',
                 width: '200%',
-                animation: 'scrollLeft 100s linear infinite',
+                animation: 'scrollLeft 50s linear infinite',
                 willChange: 'transform'
               }}
               onMouseEnter={(e) => { e.currentTarget.style.animationPlayState = 'paused'; }}
@@ -438,7 +438,7 @@ const GalleryPage = () => {
                 display: 'flex',
                 gap: 'clamp(1rem, 2vw, 2rem)',
                 width: '200%',
-                animation: 'scrollRight 90s linear infinite',
+                animation: 'scrollRight 45s linear infinite',
                 willChange: 'transform'
               }}
               onMouseEnter={(e) => { e.currentTarget.style.animationPlayState = 'paused'; }}
@@ -479,6 +479,7 @@ const GalleryPage = () => {
               fontSize: '1.3rem',
               color: 'rgba(255,255,255,0.8)',
               marginBottom: '3rem',
+              textAlign: 'center',
               lineHeight: '1.6'
             }}>
               Let us craft your perfect East African adventure.

@@ -245,6 +245,28 @@ const Header = () => {
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           position: relative;
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          overflow: hidden;
+        }
+
+        .mobile-menu-toggle::after {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: linear-gradient(45deg, transparent 30%, rgba(34, 197, 94, 0.8) 50%, transparent 70%);
+          animation: shineBorder 3s infinite;
+          pointer-events: none;
+        }
+
+        @keyframes shineBorder {
+          0% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          100% {
+            transform: translate(0, 0) rotate(360deg);
+          }
         }
 
         .mobile-menu-toggle::before {
@@ -259,6 +281,7 @@ const Header = () => {
           border-radius: 50%;
           opacity: 0;
           transition: all 0.3s ease;
+          z-index: 1;
         }
 
         .mobile-menu-toggle:hover {
@@ -329,44 +352,92 @@ const Header = () => {
 
           .nav {
             position: fixed;
-            top: 0;
-            right: -100%;
-            width: 300px;
-            height: 100vh;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.98) 0%, rgba(10, 46, 26, 0.98) 100%);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
+            top: 60px;
+            right: -200px;
+            width: 180px;
+            height: auto;
+            max-height: calc(100vh - 80px);
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 999;
-            padding: 90px 20px 40px;
+            padding: 16px;
             flex-direction: column;
             align-items: flex-start;
-            box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
-            border-left: 2px solid rgba(34, 197, 94, 0.3);
+            // box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            // border-left: none;
+            border-radius: 20px;
+            margin: 12px;
+            margin-top: 20px;
+            margin-left: 15px;
+            overflow-y: auto;
           }
 
           .nav.open {
-            right: 0;
+            right: 12px;
           }
 
           .nav-list {
             flex-direction: column;
-            gap: 12px;
-            width: 100%;
+            gap: 8px;
+            border-radius: 20px;
+            width: 80%;
+            padding: 0;
           }
 
           .nav-list a {
             font-size: 1rem;
             padding: 14px 18px;
             width: 100%;
-            border-radius: 12px;
+            border-radius: 20px;
             text-align: left;
             font-weight: 600;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(34, 197, 94, 0.2);
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(34, 197, 94, 0.3);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             color: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+          }
+
+          .nav.open .nav-list a:nth-child(1) {
+            animation-delay: 0.05s;
+          }
+
+          .nav.open .nav-list a:nth-child(2) {
+            animation-delay: 0.1s;
+          }
+
+          .nav.open .nav-list a:nth-child(3) {
+            animation-delay: 0.15s;
+          }
+
+          .nav.open .nav-list a:nth-child(4) {
+            animation-delay: 0.2s;
+          }
+
+          .nav.open .nav-list a:nth-child(5) {
+            animation-delay: 0.25s;
+          }
+
+          .nav.open .nav-list a:nth-child(6) {
+            animation-delay: 0.3s;
+          }
+
+          @keyframes slideInRight {
+            from {
+              opacity: 0;
+              transform: translateX(-20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
           }
 
           .nav-list a:hover,
@@ -405,36 +476,105 @@ const Header = () => {
 
         @media (max-width: 480px) {
           .header-container {
-            padding: 8px 14px;
-            min-height: 55px;
+            padding: 8px 12px;
+            min-height: 50px;
+            gap: 8px;
+          }
+
+          .logo-link {
+            padding: 6px 8px;
+            gap: 8px;
           }
 
           .logo-image {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
+            border-width: 2px;
           }
 
           .company-name {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
           }
 
           .company-tagline {
-            font-size: 0.6rem;
+            font-size: 0.55rem;
+            margin-top: 0px;
           }
 
           .mobile-menu-toggle {
             width: 32px;
             height: 24px;
+            padding: 6px;
+          }
+
+          .mobile-menu-toggle span {
+            height: 2.5px;
           }
 
           .nav {
-            width: 280px;
-            padding: 80px 16px 40px;
+            width: 180px;
+            top: 50px;
+            padding: 12px;
+            max-height: calc(100vh - 62px);
+          }
+
+          .nav.open {
+            right: 10px;
           }
 
           .nav-list a {
-            font-size: 0.95rem;
-            padding: 12px 16px;
+            font-size: 0.9rem;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-weight: 600;
+          }
+
+          .nav-list a:hover,
+          .nav-list a.active {
+            transform: translateX(6px) scale(1.01);
+          }
+        }
+
+        @media (max-width: 360px) {
+          .header-container {
+            padding: 6px 10px;
+            min-height: 48px;
+          }
+
+          .logo-link {
+            padding: 4px 6px;
+            gap: 6px;
+          }
+
+          .logo-image {
+            width: 32px;
+            height: 32px;
+          }
+
+          .company-name {
+            font-size: 1rem;
+          }
+
+          .company-tagline {
+            display: none;
+          }
+
+          .mobile-menu-toggle {
+            width: 30px;
+            height: 22px;
+            padding: 5px;
+          }
+
+          .nav {
+            width: 160px;
+            top: 48px;
+            padding: 10px;
+          }
+
+          .nav-list a {
+            font-size: 0.85rem;
+            padding: 8px 12px;
           }
         }
       `}</style>

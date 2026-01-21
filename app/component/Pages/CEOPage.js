@@ -4,22 +4,29 @@ import Link from 'next/link';
 const CEOPage = () => {
   const teamMembers = [
     {
-      name: "Afande Sserunkuma",
+      name: "Sserunkuma Ambrose",
       role: "Chief Executive Officer",
-      image: "/pics/ceo.jpg",
-      bio: "With over 15 years in the tourism industry, our CEO leads SSERUZ TOURS with passion and expertise, ensuring every journey creates unforgettable memories. His deep knowledge of East African destinations and commitment to sustainable tourism has positioned SSERUZ as a trusted partner for discerning travelers worldwide."
+      image: "/pics/ceo.jpg"
     },
     {
-      name: "Team Member 1",
-      role: "Operations Manager",
-      image: "/pics/team.jpg",
-      bio: "Specializes in crafting seamless travel experiences and managing our premium tour operations across East Africa. With extensive experience in logistics and customer service, she ensures every detail of your journey is perfectly coordinated for maximum enjoyment."
+      name: "Atuhaire Peace",
+      role: "Corporate Business Manager",
+      image: "/pics/busi.jpg"
     },
     {
-      name: "Team Member 2",
-      role: "Cultural Guide",
-      image: "/pics/tp.jpg",
-      bio: "Expert in local cultures and traditions, bringing authentic experiences to our valued travelers. His deep understanding of East African heritage and storytelling ability creates meaningful connections between visitors and the communities they encounter."
+      name: "Achan Irene Sserunkuma",
+      role: "Secretary & Finance Manager",
+      image: "/pics/sec.jpg"
+    },
+    {
+      name: "Mirembe Deborah",
+      role: "Company Lawyer",
+      image: "/pics/lawyer.jpg"
+    },
+    {
+      name: "Ssenyonjo Andrew",
+      role: "IT Specialist",
+      image: "/pics/it.jpg"
     }
   ];
 
@@ -45,6 +52,247 @@ const CEOPage = () => {
           0%, 100% { transform: scale(1); }
           50% { transform: scale(1.05); }
         }
+
+        /* Mobile & Tablet Responsive Styles */
+        @media (max-width: 1024px) {
+          .ceo-featured-grid {
+            gap: clamp(30px, 6vw, 60px);
+          }
+        }
+
+        @media (max-width: 768px) {
+          .ceo-hero-section {
+            padding: clamp(60px, 12vh, 100px) clamp(16px, 4vw, 32px) clamp(50px, 10vh, 80px) !important;
+          }
+
+          .ceo-featured-section {
+            padding: clamp(80px, 12vh, 100px) clamp(16px, 4vw, 32px) !important;
+          }
+
+          .ceo-featured-grid {
+            grid-template-columns: 1fr !important;
+            gap: clamp(24px, 5vw, 40px) !important;
+          }
+
+          .ceo-featured-image {
+            height: auto !important;
+            min-height: 300px !important;
+          }
+
+          .ceo-featured-info h2 {
+            font-size: clamp(2rem, 6vw, 3rem) !important;
+          }
+
+          .ceo-featured-info p {
+            font-size: clamp(1rem, 2.5vw, 1.15rem) !important;
+          }
+
+          .team-members-section {
+            padding: clamp(80px, 12vh, 100px) clamp(16px, 4vw, 32px) !important;
+          }
+
+          .team-members-grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+            gap: clamp(16px, 3vw, 30px) !important;
+          }
+
+          .team-member-card {
+            animation: fadeInUp 0.8s ease-out !important;
+          }
+
+          .team-member-image {
+            height: 200px !important;
+          }
+
+          .team-member-card h3 {
+            font-size: clamp(1.2rem, 4vw, 1.8rem) !important;
+          }
+
+          .team-member-card > div:last-child {
+            padding: clamp(16px, 3vw, 28px) !important;
+          }
+
+          .company-logo-card {
+            gridColumn: span 2 !important;
+            flex-direction: column !important;
+            min-height: auto !important;
+            text-align: center !important;
+          }
+
+          .company-logo-card > div:first-child {
+            border-right: none !important;
+            border-bottom: 1px solid rgba(34, 197, 94, 0.2) !important;
+            padding: clamp(24px, 4vw, 32px) !important;
+          }
+
+          .company-logo-card > div:last-child {
+            padding: clamp(24px, 4vw, 32px) !important;
+            text-align: center !important;
+          }
+
+          .company-logo-card h3 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem) !important;
+          }
+
+          .company-logo-card p {
+            font-size: clamp(0.95rem, 2.5vw, 1.25rem) !important;
+          }
+
+          .cta-section {
+            padding: clamp(80px, 12vh, 100px) clamp(16px, 4vw, 32px) !important;
+          }
+
+          .cta-section h2 {
+            font-size: clamp(2rem, 6vw, 3.5rem) !important;
+          }
+
+          .cta-section p {
+            font-size: clamp(1rem, 2.5vw, 1.25rem) !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .ceo-hero-tagline {
+            font-size: 0.7rem !important;
+            padding: clamp(8px, 2vw, 12px) clamp(16px, 4vw, 24px) !important;
+          }
+
+          .ceo-hero-h1 {
+            font-size: clamp(2rem, 5vw, 4.5rem) !important;
+            margin-bottom: 16px !important;
+            letter-spacing: -2px !important;
+          }
+
+          .ceo-hero-p {
+            font-size: clamp(1rem, 2vw, 1.4rem) !important;
+            padding: 0 clamp(8px, 2vw, 16px) !important;
+          }
+
+          .ceo-section {
+            padding: clamp(60px, 10vh, 80px) clamp(12px, 3vw, 24px) !important;
+          }
+
+          .team-members-grid {
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
+            gap: clamp(12px, 2vw, 20px) !important;
+          }
+
+          .team-member-card {
+            border-radius: 12px !important;
+          }
+
+          .team-member-image {
+            height: 160px !important;
+          }
+
+          .team-member-card h3 {
+            font-size: 1rem !important;
+            margin-bottom: 4px !important;
+          }
+
+          .team-member-card > div:last-child {
+            font-size: 0.85rem !important;
+          }
+
+          .company-logo-card {
+            gridColumn: auto !important;
+          }
+
+          .company-logo-card > div:first-child {
+            max-width: 120px !important;
+            margin: 0 auto !important;
+          }
+
+          .company-logo-card > div:first-child img {
+            max-width: 120px !important;
+            max-height: 120px !important;
+          }
+
+          .cta-section {
+            padding: clamp(60px, 10vh, 80px) clamp(12px, 3vw, 24px) !important;
+          }
+
+          .cta-buttons {
+            flex-direction: column !important;
+            align-items: stretch !important;
+            gap: 12px !important;
+          }
+
+          .cta-buttons > a, .cta-buttons > button {
+            width: 100% !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .ceo-hero-section {
+            padding: clamp(40px, 8vh, 60px) clamp(12px, 3vw, 20px) clamp(30px, 6vh, 50px) !important;
+          }
+
+          .ceo-hero-tagline {
+            font-size: 0.65rem !important;
+            padding: 6px clamp(12px, 3vw, 16px) !important;
+          }
+
+          .ceo-hero-h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem) !important;
+            letter-spacing: -1px !important;
+          }
+
+          .ceo-featured-info h2 {
+            font-size: clamp(1.5rem, 5vw, 2.2rem) !important;
+          }
+
+          .team-members-grid {
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+            gap: 10px !important;
+          }
+
+          .team-member-image {
+            height: 140px !important;
+          }
+
+          .team-member-card h3 {
+            font-size: 0.9rem !important;
+          }
+
+          .team-member-card > div:last-child {
+            padding: 12px 10px !important;
+            font-size: 0.75rem !important;
+          }
+
+          .company-logo-card {
+            padding: 0 !important;
+          }
+
+          .company-logo-card > div:first-child {
+            padding: 20px !important;
+          }
+
+          .company-logo-card > div:first-child img {
+            max-width: 100px !important;
+          }
+
+          .company-logo-card > div:last-child {
+            padding: 20px !important;
+          }
+
+          .company-logo-card h3 {
+            font-size: 1.4rem !important;
+          }
+
+          .company-logo-card p {
+            font-size: 0.85rem !important;
+            line-height: 1.5 !important;
+          }
+
+          .cta-section h2 {
+            font-size: clamp(1.6rem, 5vw, 2.5rem) !important;
+          }
+
+          .cta-section p {
+            font-size: clamp(0.9rem, 2vw, 1rem) !important;
+          }
+        }
       `}</style>
 
       {/* Hero Section */}
@@ -53,12 +301,12 @@ const CEOPage = () => {
         padding: 'clamp(100px, 15vh, 140px) clamp(20px, 5vw, 40px) clamp(80px, 12vh, 100px)',
         background: 'linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(10,10,10,0.9) 100%)',
         overflow: 'hidden'
-      }}>
+      }} className="ceo-hero-section">
         {/* Background Image */}
         <div style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: 'url("/pics/ceo.jpg")',
+          backgroundImage: 'url("/pics/logo.jpg.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
@@ -100,7 +348,7 @@ const CEOPage = () => {
               background: 'rgba(34,197,94,0.1)',
               border: '1px solid rgba(34,197,94,0.3)',
               marginBottom: '32px'
-            }}>
+            }} className="ceo-hero-tagline">
               <span style={{ color: '#22c55e', fontWeight: '700', letterSpacing: '1px' }}>MEET OUR TEAM</span>
             </div>
 
@@ -114,7 +362,7 @@ const CEOPage = () => {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               // textShadow: '0 2px 4px rgba(0,0,0,0.8), 0 4px 8px rgba(0,0,0,0.6), 0 8px 16px rgba(0,0,0,0.4)'
-            }}>
+            }} className="ceo-hero-h1">
               Leadership & Team
             </h1>
 
@@ -126,7 +374,7 @@ const CEOPage = () => {
               margin: '0 auto',
               textShadow: '0 1px 3px rgba(0,0,0,0.8), 0 2px 6px rgba(0,0,0,0.6)',
               fontWeight: '500'
-            }}>
+            }} className="ceo-hero-p">
               Meet the passionate professionals behind SSERUZ TOURS who bring East Africa to life through exceptional service and deep cultural understanding.
             </p>
           </div>
@@ -137,7 +385,7 @@ const CEOPage = () => {
       <section style={{
         padding: '120px 40px',
         backgroundColor: '#000000'
-      }}>
+      }} className="ceo-featured-section ceo-section">
         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
           <div style={{
             display: 'grid',
@@ -145,12 +393,12 @@ const CEOPage = () => {
             gap: 'clamp(40px, 8vw, 80px)',
             alignItems: 'center',
             marginBottom: 'clamp(80px, 15vh, 120px)'
-          }}>
+          }} className="ceo-featured-grid">
             {/* CEO Image */}
             <div style={{
               animation: 'fadeInScale 1s ease-out',
               position: 'relative'
-            }}>
+            }} className="ceo-featured-image">
               <div style={{
                 borderRadius: '20px',
                 overflow: 'hidden',
@@ -164,14 +412,14 @@ const CEOPage = () => {
                     width: '100%',
                     height: '500px',
                     objectFit: 'cover',
-                    objectPosition: 'center top'
+                    objectPosition: 'center 25%'
                   }}
                 />
               </div>
             </div>
 
             {/* CEO Info */}
-            <div style={{ animation: 'fadeInUp 1s ease-out 0.3s backwards' }}>
+            <div style={{ animation: 'fadeInUp 1s ease-out 0.3s backwards' }} className="ceo-featured-info">
               <div style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -194,7 +442,7 @@ const CEOPage = () => {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
               }}>
-                Afande Sserunkuma
+                Sserunkuma Ambrose
               </h2>
 
               <div style={{
@@ -264,7 +512,7 @@ const CEOPage = () => {
         padding: '120px 40px',
         background: 'linear-gradient(180deg, #000000 0%, #0a0a0a 100%)',
         position: 'relative'
-      }}>
+      }} className="team-members-section">
         <div style={{
           position: 'absolute',
           inset: 0,
@@ -298,8 +546,9 @@ const CEOPage = () => {
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: 'clamp(24px, 4vw, 40px)'
-          }}>
+            gap: 'clamp(24px, 4vw, 40px)',
+            autoFlow: 'dense'
+          }} className="team-members-grid">
             {teamMembers.slice(1).map((member, index) => (
               <div
                 key={index}
@@ -311,6 +560,7 @@ const CEOPage = () => {
                   transition: 'all 0.4s ease',
                   animation: `fadeInUp 1s ease-out ${0.2 * (index + 1)}s backwards`
                 }}
+                className="team-member-card"
                 onMouseEnter={e => {
                   e.currentTarget.style.transform = 'translateY(-10px)';
                   e.currentTarget.style.borderColor = '#22c55e';
@@ -326,7 +576,7 @@ const CEOPage = () => {
                   height: '280px',
                   overflow: 'hidden',
                   position: 'relative'
-                }}>
+                }} className="team-member-image">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -346,7 +596,7 @@ const CEOPage = () => {
                   />
                 </div>
 
-                <div style={{ padding: '32px 28px' }}>
+                <div style={{ padding: '32px 28px', textAlign: 'center' }}>
                   <h3 style={{
                     fontSize: '1.8rem',
                     fontWeight: '800',
@@ -358,21 +608,89 @@ const CEOPage = () => {
                   <div style={{
                     fontSize: '1rem',
                     color: '#22c55e',
-                    fontWeight: '600',
-                    marginBottom: '20px'
+                    fontWeight: '600'
                   }}>
                     {member.role}
                   </div>
-                  <p style={{
-                    fontSize: '1rem',
-                    color: 'rgba(255,255,255,0.75)',
-                    lineHeight: '1.6'
-                  }}>
-                    {member.bio}
-                  </p>
                 </div>
               </div>
             ))}
+            
+            {/* Company Logo & Description Card */}
+            <div
+              style={{
+                gridColumn: '1 / -1',
+                background: 'linear-gradient(135deg, rgba(34,197,94,0.1) 0%, rgba(34,197,94,0.05) 100%)',
+                borderRadius: '20px',
+                overflow: 'hidden',
+                border: '1px solid rgba(34,197,94,0.3)',
+                transition: 'all 0.4s ease',
+                animation: 'fadeInUp 1s ease-out 1.2s backwards',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+                minHeight: '320px',
+                textAlign: 'center'
+              }}
+              className="company-logo-card"
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-10px)';
+                e.currentTarget.style.borderColor = '#22c55e';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(34,197,94,0.2)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.borderColor = 'rgba(34,197,94,0.3)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              {/* Logo Section */}
+              <div style={{
+                flex: '0 0 auto',
+                padding: '40px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRight: '1px solid rgba(34,197,94,0.2)'
+              }}>
+                <img 
+                  src="/pics/logo.jpg.jpg" 
+                  alt="SSERUZ TOURS Logo"
+                  style={{
+                    maxWidth: '200px',
+                    maxHeight: '200px',
+                    objectFit: 'contain',
+                    borderRadius: '16px'
+                  }}
+                />
+              </div>
+
+              {/* Text Section */}
+              <div style={{
+                flex: '1',
+                padding: '40px 48px',
+                textAlign: 'center'
+              }}>
+                <h3 style={{
+                  fontSize: '2.5rem',
+                  fontWeight: '900',
+                  color: '#ffffff',
+                  marginBottom: '16px',
+                  letterSpacing: '-1px'
+                }}>
+                  SSERUZ TOURS
+                </h3>
+                <p style={{
+                  fontSize: '1.25rem',
+                  color: 'rgba(255,255,255,0.85)',
+                  lineHeight: '1.8',
+                  margin: '0'
+                }}>
+                  Discover authentic East African experiences with expert guides and sustainable tourism practices. Your journey to adventure starts here. At SSERUZ TOURS, we are committed to crafting unforgettable safari journeys that celebrate the natural beauty and rich cultural heritage of East Africa. From wildlife encounters to cultural immersion, every experience is carefully curated to exceed your expectations and create lasting memories.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -382,7 +700,7 @@ const CEOPage = () => {
         padding: '120px 40px',
         textAlign: 'center',
         position: 'relative'
-      }}>
+      }} className="cta-section">
         <div style={{
           position: 'absolute',
           inset: 0,
@@ -418,7 +736,7 @@ const CEOPage = () => {
             gap: '24px',
             justifyContent: 'center',
             flexWrap: 'wrap'
-          }}>
+          }} className="cta-buttons">
             <Link href="/contact">
               <button style={{
                 padding: '20px 48px',

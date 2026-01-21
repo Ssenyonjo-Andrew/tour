@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 const DestinationPage = () => {
   const [selectedCountry, setSelectedCountry] = React.useState('all');
+  const [showMap, setShowMap] = React.useState(false);
 
   const destinations = [
     {
@@ -276,6 +277,52 @@ const DestinationPage = () => {
     { id: 'Rwanda', name: 'Rwanda', flag: '🇷🇼' }
   ];
 
+  // Game Park Locations for Google Maps
+  const gameParks = [
+    { name: 'Samburu National Reserve', lat: 0.5, lng: 37.5 },
+    { name: 'Amboseli National Park', lat: -2.6, lng: 37.3 },
+    { name: 'Masai Mara National Reserve', lat: -1.4, lng: 35.0 },
+    { name: 'Serengeti National Park', lat: -2.3, lng: 34.8 },
+    { name: 'Tsavo East National Park', lat: -3.3, lng: 38.5 },
+    { name: 'Tsavo West National Park', lat: -3.6, lng: 38.1 },
+    { name: 'Lake Nakuru National Park', lat: -0.3, lng: 36.1 },
+    { name: 'Aberdare National Park', lat: -0.4, lng: 36.7 },
+    { name: 'Nairobi National Park', lat: -1.3, lng: 36.8 },
+    { name: "Hell's Gate National Park", lat: -0.5, lng: 36.3 },
+    { name: 'Bwindi Impenetrable Forest', lat: -1.05, lng: 29.83 },
+    { name: 'Queen Elizabeth National Park', lat: -0.23, lng: 30.0 },
+    { name: 'Murchison Falls National Park', lat: 2.47, lng: 31.88 },
+    { name: 'Kidepo Valley National Park', lat: 3.52, lng: 34.22 },
+    { name: 'Rwenzori Mountains National Park', lat: 0.46, lng: 30.05 },
+    { name: 'Lake Mburo National Park', lat: -0.64, lng: 30.48 },
+    { name: 'Kibale National Park', lat: 0.54, lng: 30.58 },
+    { name: 'Mgahinga Gorilla National Park', lat: -1.36, lng: 29.57 },
+    { name: 'Tarangire National Park', lat: -3.35, lng: 35.82 },
+    { name: 'Lake Manyara National Park', lat: -3.40, lng: 35.82 },
+    { name: 'Selous Game Reserve', lat: -7.5, lng: 37.5 },
+    { name: 'Gombe National Park', lat: -4.68, lng: 29.58 },
+    { name: 'Mahale Mountains National Park', lat: -6.15, lng: 29.58 },
+    { name: 'Akagera National Park', lat: -1.05, lng: 30.42 }
+  ];
+
+  // Create Google Maps URL with markers
+  const createMapsUrl = () => {
+    const center = gameParks.length > 0 ? gameParks[0] : { lat: -1.0, lng: 35.0 };
+    let mapsUrl = `https://www.google.com/maps/d/u/0/edit?mid=1&usp=sharing&center=${center.lat},${center.lng}&zoom=6`;
+    
+    // Alternative: Create a multi-point Google Maps URL
+    mapsUrl = `https://www.google.com/maps/?q=${gameParks.map(park => encodeURIComponent(park.name + ' ' + park.lat + ' ' + park.lng)).join('|')}`;
+    
+    // Better approach: Create custom map with all locations
+    const locationString = gameParks.map(park => `${park.lat},${park.lng}`).join('/');
+    mapsUrl = `https://www.google.com/maps/embed?pb=!1m16!4m14!1m6!1m2!1s0x18431ec75af13d41:0x7efb1c8e30d6eec3!2sEast%20Africa!2m2!1d34.5!2d-6!1m6!1m2!1s0x0!2sSamburu%20National%20Reserve!2m2!1d37.5!2d0.5!5e0!3m2!1sen!2s!4v1234567890`;
+    
+    // Most practical: Direct to Google Maps with search
+    mapsUrl = `https://www.google.com/maps/search/game+parks+kenya+uganda+tanzania/@-1,35,5z`;
+    
+    return mapsUrl;
+  };
+
   const filteredDestinations = selectedCountry === 'all'
     ? destinations
     : destinations.filter(dest => dest.location.includes(selectedCountry));
@@ -421,7 +468,8 @@ const DestinationPage = () => {
             flexWrap: 'wrap',
             gap: '20px',
             justifyContent: 'center',
-            marginBottom: '48px'
+            marginBottom: '48px',
+            alignItems: 'center'
           }}>
             {countries.map(country => (
               <button
@@ -465,6 +513,41 @@ const DestinationPage = () => {
                 <span>{country.name}</span>
               </button>
             ))}
+            
+            <button
+              onClick={() => window.open(createMapsUrl(), '_blank')}
+              style={{
+                padding: '16px 32px',
+                borderRadius: '40px',
+                border: 'none',
+                background: 'linear-gradient(135deg, #16a34a 0%, #15803d 100%)',
+                color: '#ffffff',
+                fontSize: '1.1rem',
+                fontWeight: '700',
+                cursor: 'pointer',
+                transition: 'all 0.4s ease',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '12px',
+                minWidth: '200px',
+                justifyContent: 'center',
+                boxShadow: '0 8px 25px rgba(34,197,94,0.4)',
+                whiteSpace: 'nowrap'
+              }}
+              onMouseEnter={e => {
+                e.target.style.transform = 'translateY(-4px)';
+                e.target.style.boxShadow = '0 12px 35px rgba(34,197,94,0.5)';
+                e.target.style.background = 'linear-gradient(135deg, #15803d 0%, #166534 100%)';
+              }}
+              onMouseLeave={e => {
+                e.target.style.transform = 'translateY(0)';
+                e.target.style.boxShadow = '0 8px 25px rgba(34,197,94,0.4)';
+                e.target.style.background = 'linear-gradient(135deg, #16a34a 0%, #15803d 100%)';
+              }}
+            >
+              <span style={{ fontSize: '1.4em' }}>📍</span>
+              <span>View on Maps</span>
+            </button>
           </div>
 
           <div style={{
