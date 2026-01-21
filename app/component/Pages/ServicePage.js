@@ -147,7 +147,7 @@ const ServicePage = () => {
               textShadow: '0 1px 3px rgba(0,0,0,0.8), 0 2px 6px rgba(0,0,0,0.6)',
               fontWeight: '500'
             }}>
-              At SSERUZ TOURS AND TRAVEL, we specialize in creating and delivering fully customized tour packages that cater to your clients' unique needs while seamlessly representing your brand on the ground. From premium car rentals to expert tour guides, we provide comprehensive services for unforgettable East African experiences.
+              We create customized tour packages, represent your brand, and provide premium car rentals and expert guides for unforgettable East African experiences.
             </p>
           </div>
         </div>
@@ -291,7 +291,7 @@ const ServicePage = () => {
             marginBottom: '56px',
             lineHeight: '1.6'
           }}>
-            Let's create exceptional experiences that inspire travelers and foster sustainable development.
+            Create exceptional experiences that inspire travelers and promote sustainable development.
           </p>
           <div style={{
             display: 'flex',

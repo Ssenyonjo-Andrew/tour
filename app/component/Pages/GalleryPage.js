@@ -343,7 +343,7 @@ const GalleryPage = () => {
             lineHeight: '1.7',
             fontWeight: '400'
           }}>
-            Discover the beauty, culture, and adventure of East Africa through our curated collection of unforgettable moments
+            Explore East Africa's beauty, culture, and adventure through our collection of unforgettable moments
           </p>
 
           <div style={{
@@ -481,7 +481,7 @@ const GalleryPage = () => {
               marginBottom: '3rem',
               lineHeight: '1.6'
             }}>
-              Let SSERUZ TOURS AND TRAVEL craft your perfect East African adventure.
+              Let us craft your perfect East African adventure.
             </p>
             <a href="/contact" style={{ textDecoration: 'none' }}>
               <button

@@ -82,7 +82,7 @@ const AboutUsPage = () => {
             margin: '0 auto 40px',
             lineHeight: '1.6'
           }}>
-            For over 15 years, SSERUZ TOURS has been crafting authentic, sustainable travel experiences that connect you with East Africa's natural beauty, rich cultures, and vibrant communities.
+            15+ years crafting authentic, sustainable travel experiences connecting you with East Africa's beauty, culture, and communities.
           </p>
 
           <div style={{
@@ -156,7 +156,7 @@ const AboutUsPage = () => {
           marginLeft: 'auto',
           marginRight: 'auto'
         }}>
-          To create transformative travel experiences that connect people with East Africa's natural beauty, rich cultures, and vibrant communities while promoting sustainable tourism and positive social impact.
+          Creating transformative experiences connecting people with East Africa's beauty, cultures, and communities through sustainable tourism.
         </p>
 
         <div style={{
@@ -258,7 +258,7 @@ const AboutUsPage = () => {
             margin: '0 auto 48px',
             lineHeight: '1.6'
           }}>
-            Watch our journey through the stunning landscapes, vibrant cultures, and unforgettable moments that make East Africa truly extraordinary.
+            Experience our journey through East Africa's stunning landscapes, vibrant cultures, and unforgettable moments.
           </p>
 
           <div style={{
@@ -409,7 +409,7 @@ const AboutUsPage = () => {
             margin: '0 auto 48px',
             lineHeight: '1.6'
           }}>
-            Get to know the passionate professionals who make SSERUZ TOURS exceptional.
+            Meet the passionate professionals behind SSERUZ TOURS.
           </p>
 
           <div style={{

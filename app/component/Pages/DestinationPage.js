@@ -390,7 +390,7 @@ const DestinationPage = () => {
             textShadow: '0 2px 12px rgba(0,0,0,0.8)',
             animation: 'fadeInUp 1.4s ease-out 0.6s backwards'
           }}>
-            Discover the most spectacular wildlife destinations in Kenya, Uganda, and Tanzania. From the Great Migration to mountain gorillas, experience Africa's incredible biodiversity.
+            Explore spectacular wildlife destinations in Kenya, Uganda, and Tanzania. From Great Migration to mountain gorillas.
           </p>
         </div>
       </section>

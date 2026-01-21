@@ -215,7 +215,7 @@ const HomePage = () => {
               </p>
 
               <p style={{ fontSize: '1.5rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.75', marginBottom: '40px', maxWidth: '576px' }}>
-                Your gateway to East Africa's spectacular wildlife, pristine nature, and rich cultural heritage. We create sustainable adventures that respect destinations and uplift communities across Uganda, Rwanda, Kenya, and Tanzania.
+                Discover East Africa's wildlife, nature, and culture. Sustainable adventures across Uganda, Rwanda, Kenya, and Tanzania.
               </p>
 
               <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '48px', justifyContent: 'center' }}>
