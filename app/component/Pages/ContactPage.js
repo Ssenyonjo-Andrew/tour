@@ -243,7 +243,7 @@ const ContactPage = () => {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
               }} className="section-heading">
-                Send Us Your Feedback
+                Book your safari adventure
               </h2>
               <p style={{
                 fontSize: '1rem',
