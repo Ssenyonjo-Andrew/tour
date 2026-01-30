@@ -369,7 +369,7 @@ const ContactPage = () => {
 
       {/* WhatsApp Icon */}
       <a
-        href="https://wa.me/0775769883"
+        href="https://wa.me/256775769883"
         target="_blank"
         rel="noopener noreferrer"
         style={{
