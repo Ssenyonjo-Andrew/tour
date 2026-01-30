@@ -30,7 +30,7 @@ const ContactPage = () => {
       minHeight: '100vh',
       position: 'relative'
     }}>
-      <style jsx>{`
+      {/* <style jsx>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(40px); }
           to { opacity: 1; transform: translateY(0); }
@@ -141,7 +141,7 @@ const ContactPage = () => {
             font-size: 16px !important;
           }
         }
-      `}</style>
+      `}</style> */}
 
       {/* Hero Section */}
       <section style={{
